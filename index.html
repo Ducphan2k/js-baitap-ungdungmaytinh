@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #input {
+        margin-bottom: 0.5em;
+      }
+
+      .addition:hover {
+        background-color: rgb(184, 74, 74);
+        cursor: pointer;
+      }
+      .subtraction:hover {
+        background-color: rgb(182, 182, 73);
+        cursor: pointer;
+      }
+      .multiplication:hover {
+        background-color: rgb(55, 85, 160);
+        cursor: pointer;
+      }
+      .division:hover {
+        background-color: green;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Caculator</h1>
+    <form action="" id="form">
+      <div id="input">
+        <input type="text" id="input1" />
+        <input type="text" id="input2" />
+      </div>
+      <div id="btn">
+        <button onclick="additionResult()" class="addition">Addition(+)</button>
+        <button onclick="SubtractionResult()" class="subtraction">
+          Subtraction(-)
+        </button>
+        <button onclick="MultiplicationResult()" class="multiplication">
+          Multiplication(*)
+        </button>
+        <button onclick="DivisionResult()" class="division">Division(/)</button>
+      </div>
+      <div id="output"></div>
+    </form>
+
+    <script>
+      function additionResult() {
+        let num1 = parseInt(document.getElementById("input1").value);
+        let num2 = parseInt(document.getElementById("input2").value);
+        let result = num1 + num2;
+        alert("kết quả là :" + result);
+      }
+      function SubtractionResult() {
+        let num1 = parseInt(document.getElementById("input1").value);
+        let num2 = parseInt(document.getElementById("input2").value);
+        let result = num1 - num2;
+        alert("kết quả là :" + result);
+      }
+      function MultiplicationResult() {
+        let num1 = parseInt(document.getElementById("input1").value);
+        let num2 = parseInt(document.getElementById("input2").value);
+        let result = num1 * num2;
+        alert("kết quả là :" + result);
+      }
+      function DivisionResult() {
+        let num1 = parseInt(document.getElementById("input1").value);
+        let num2 = parseInt(document.getElementById("input2").value);
+        let result = num1 / num2;
+        alert("kết quả là :" + result);
+      }
+    </script>
+  </body>
+</html>
